@@ -66,10 +66,6 @@ public class Game {
 
     public int sayHelloAndSetSize() {
         int size;
-
-        message.println("Kucuklugumuzun oyunu sos basliyor.");
-        message.println("Hazirsaniz kemerlerinizi baglayin ve ucusa hazir olun");
-
         do {
             message.print("Kare boyutu ne olsun ? ( 3-7 ) :");
             size = scanner.nextInt();
