@@ -11,9 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-
+            message.rules();
             Game game = new Game();
-
             Matrix matrix = new Matrix(game.sayHelloAndSetSize());
             final int gameTotal = matrix.getMatrixSize() * matrix.getMatrixSize();
             int row = -1, col = -1, temp = 0;
@@ -35,9 +34,8 @@ public class Main {
                     } while (!matrix.checkCell(row, col));
 
                     matrix.fillMatrix(row, col, game.getComputerCharacter());
-                    message.empty();
-                    message.println("Computer");
-                    message.println("Satir : " + (row + 1) + ", " + (col + 1));
+                    message.print("Current Gamer => Computer, ");
+                    message.println("Oynanan hamle : " + (row + 1) + ", " + (col + 1));
 
                     matrix.drawMatrix();
                     game.checkSOS(matrix, row, col, game.getComputerCharacter(), "Computer");
@@ -47,11 +45,10 @@ public class Main {
                         message.println("SOS oldugun icin yeniden oyun hakki veriliyor");
                         game.setGamer("Computer");
                     } else game.setGamer("User");
-
+                    message.divider();
                 } else {
                     final int userScore = game.getUserPoint();
-                    message.empty();
-                    message.println("User");
+                    message.println("Current Gamer => User");
                     temp = 0;
                     do {
                         if (temp > 0) {
@@ -72,11 +69,11 @@ public class Main {
                         message.println("SOS oldugun icin yeniden oyun hakki veriliyor");
                         game.setGamer("User");
                     } else game.setGamer("Computer");
+                    message.divider();
                 }
-
             }
             newGame();
-        } catch (Exception exception) {
+        } catch (RuntimeException e) {
             message.println("Hata ile karsilasildi");
             newGame();
         }
@@ -92,7 +89,7 @@ public class Main {
             if (secim == 1) {
                 main(null);
             } else return;
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             newGame();
         }
 
