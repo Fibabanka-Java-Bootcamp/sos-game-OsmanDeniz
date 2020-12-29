@@ -23,3 +23,19 @@ Panel üzerinde hiç boş kutu kalmayana kadar oyun oynanır, sonunda en çok pu
 7. Dolu kutulara harf yazılmasına izin verilmez.
    
 > Önemli Not : Başka kaynaklardan yararlanabilirsiniz ama kopya ödevler başarısız kabul edilecektir :)  
+
+## Oyun Açıklamaları 
+
+- Oyun başlatıldığında kullanıcıdan oynanmasını istediği kare sayısı alınır.
+- Kullanıcı ve bilgisayara karşı oynar.
+- Oyuna kimin ve hangi harf ile başlayacağına sistem rastgele olarak karar verir.
+- Kullanıcıya gösterilen bilgiler
+   - Oyunun son durumu 
+   - Puan durumu
+   - Sıra bilgisayardayken, bilgisayarın oynamış olduğu hamle
+   - SOS olması durumunda yeni hak verildiğine dair bilgilendirme mesajı
+- Oyun başladıktan sonra kullanıcıdan istenen bilgiler 
+   -  Hamle yapmasını istediği satır bilgisi
+   -  Hamle yapmasını istediği sütun bilgisi
+- Oyun sonunda kazanan bilgisi gösterilir.
+- Oyun bittikten sonra kullanıcıya yeni oyun oynamak isteyip istemediği sorularak tercih yapması istenir.
