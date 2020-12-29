@@ -72,6 +72,7 @@ public class Main {
                     message.divider();
                 }
             }
+            game.finishScore();
             newGame();
         } catch (RuntimeException e) {
             message.println("Hata ile karsilasildi");

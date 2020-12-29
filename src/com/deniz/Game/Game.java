@@ -64,6 +64,15 @@ public class Game {
         return gameCount++;
     }
 
+    public void finishScore() {
+        message.divider();
+        if (!(userPoint == computerPoint))
+            message.println("Oyunu kazanan : " + ((userPoint > computerPoint) ? "User" : "Computer"));
+        else
+            message.println("Oyun durumu berabere.");
+        message.divider();
+    }
+
     public int sayHelloAndSetSize() {
         int size;
         do {
